@@ -3,7 +3,7 @@ import { GithubIcon, LinkedinIcon } from './Icons';
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding bg-[#0d0d0f]">
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="reveal max-w-2xl">

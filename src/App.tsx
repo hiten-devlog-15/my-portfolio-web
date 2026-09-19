@@ -30,7 +30,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0d0d0f]">
+    <div className="min-h-screen bg-[#111114]">
       <Navbar />
       <main>
         <Hero />

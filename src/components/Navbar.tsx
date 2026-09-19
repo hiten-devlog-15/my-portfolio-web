@@ -1,38 +1,23 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-
+import { Home, User, Code2, FolderCode, Briefcase, Mail } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home',       href: '#home',       Icon: Home },
+  { label: 'About',      href: '#about',      Icon: User },
+  { label: 'Skills',     href: '#skills',     Icon: Code2 },
+  { label: 'Projects',   href: '#projects',   Icon: FolderCode },
+  { label: 'Experience', href: '#experience', Icon: Briefcase },
+  { label: 'Contact',    href: '#contact',    Icon: Mail },
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  const handleClose = () => setMenuOpen(false);
-
   return (
     <>
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? 'bg-[#0d0d0f]/95 backdrop-blur-md border-b border-[#1e1e24] py-3'
-            : 'bg-transparent py-5'
-        }`}
-      >
-        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+      {/* ═══════════════════════════════════════
+          BAR 1 — Main header (NOT sticky)
+          Scrolls away with page content.
+      ═══════════════════════════════════════ */}
+      <header className="relative z-40 bg-[#0d0d0f] border-b border-[#1e1e24]">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <a
             href="#home"
@@ -42,63 +27,56 @@ export default function Navbar() {
             Hiten Nath
           </a>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-7" aria-label="Primary navigation">
-            {navLinks.map((link) => (
-              <a key={link.label} href={link.href} className="nav-link">
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="mailto:nathhiten704@gmail.com"
-              className="btn-primary text-xs px-4 py-2 ml-2"
-              aria-label="Let's Connect via email"
-            >
-              Let's Connect
-            </a>
-          </nav>
-
-          {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden text-[#8a8a9a] hover:text-[#f0f0f2] transition-colors p-1"
-            onClick={() => setMenuOpen((v) => !v)}
-            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={menuOpen}
+          {/* Let's Connect — unchanged */}
+          <a
+            href="mailto:nathhiten704@gmail.com"
+            className="btn-primary text-xs px-4 py-2"
+            aria-label="Let's Connect via email"
           >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+            Let's Connect
+          </a>
         </div>
       </header>
 
-      {/* Mobile Drawer */}
-      {menuOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-[#0d0d0f]/98 flex flex-col pt-20 px-8 pb-8 md:hidden"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Navigation menu"
+      {/* ═══════════════════════════════════════
+          BAR 2 — Floating Navigation Pill (STICKY)
+          Stays fixed near the top after Bar 1 scrolls away.
+      ═══════════════════════════════════════ */}
+      <div className="sticky top-3 z-50 flex justify-center px-4 py-3 pointer-events-none">
+        <nav
+          className="pointer-events-auto flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#121218]/90 backdrop-blur-md border border-[#22222e] shadow-lg shadow-black/50"
+          aria-label="Primary navigation"
         >
-          <nav className="flex flex-col gap-6 mt-6" aria-label="Mobile navigation">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-[#f0f0f2] text-xl font-medium hover:text-[#4f7ef7] transition-colors no-underline"
-                onClick={handleClose}
-              >
-                {link.label}
-              </a>
-            ))}
+          {navLinks.map(({ label, href, Icon }) => (
             <a
-              href="mailto:nathhiten704@gmail.com"
-              className="btn-primary mt-4 self-start"
-              onClick={handleClose}
+              key={label}
+              href={href}
+              aria-label={label}
+              className="relative group flex items-center justify-center w-9 h-9 rounded-full text-[#7e7e92] hover:text-[#f0f0f2] hover:bg-[#1d1d26] transition-all duration-150"
             >
-              Let's Connect
+              <Icon size={18} strokeWidth={1.6} />
+
+              {/* Tooltip — visible on hover only */}
+              <span
+                className="
+                  absolute top-full mt-2 left-1/2 -translate-x-1/2
+                  px-2.5 py-1 rounded-md
+                  text-[11px] font-medium tracking-wide
+                  bg-[#16161c] border border-[#262632] text-[#c8c8d8]
+                  whitespace-nowrap
+                  opacity-0 group-hover:opacity-100
+                  translate-y-1 group-hover:translate-y-0
+                  transition-all duration-150 pointer-events-none
+                  z-50 shadow-md
+                "
+                role="tooltip"
+              >
+                {label}
+              </span>
             </a>
-          </nav>
-        </div>
-      )}
+          ))}
+        </nav>
+      </div>
     </>
   );
 }

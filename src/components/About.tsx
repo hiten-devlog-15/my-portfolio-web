@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="section-padding">
+    <section id="about" className="section-padding bg-[#0d0d0f]">
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="reveal max-w-2xl">

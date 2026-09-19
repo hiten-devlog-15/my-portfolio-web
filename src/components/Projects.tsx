@@ -101,7 +101,7 @@ export default function Projects() {
   const [selected, setSelected] = useState<(typeof projects)[0] | null>(null);
 
   return (
-    <section id="projects" className="section-padding">
+    <section id="projects" className="section-padding bg-[#0d0d0f]">
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="reveal">

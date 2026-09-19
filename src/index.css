@@ -15,6 +15,12 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Offset anchor targets by the height of the sticky nav bar (Bar 2 ~52px) */
+section[id] {
+  scroll-margin-top: 56px;
+}
+
+
 body {
   background-color: #0d0d0f;
   color: #f0f0f2;
@@ -56,12 +62,9 @@ body {
   background: #3a3a48;
 }
 
-/* ===== HERO GRID BG ===== */
+/* ===== HERO BG ===== */
 .hero-grid {
-  background-image:
-    linear-gradient(rgba(79,126,247,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(79,126,247,0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
+  /* Plain dark background without grid pattern */
 }
 
 /* ===== SECTION SPACING ===== */
