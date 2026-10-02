@@ -1,12 +1,11 @@
 import { ArrowRight, Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
-import heroImage from '../assets/hero.png';
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="hero-grid relative min-h-screen flex items-center justify-center pt-12 pb-16 bg-[#111114]"
+      className="hero-grid relative min-h-screen flex items-center justify-center pt-12 pb-16"
     >
       {/* Subtle radial glow — very restrained */}
       <div
@@ -17,20 +16,6 @@ export default function Hero() {
       />
 
       <div className="max-w-3xl mx-auto px-6 w-full flex flex-col items-center text-center">
-
-        {/* ── Portrait ── */}
-        <div className="portrait-container w-[220px] sm:w-[260px] lg:w-[300px] mb-8">
-          <img
-            src={heroImage}
-            alt="Hiten Nath — Java Backend Developer"
-            className="w-full h-auto rounded-xl object-cover object-top"
-            style={{
-              border: '1px solid rgba(79,126,247,0.18)',
-              boxShadow: '0 24px 64px rgba(0,0,0,0.55)',
-              display: 'block',
-            }}
-          />
-        </div>
 
         {/* ── Role label ── */}
         <p className="section-label mb-3">Java Backend Developer</p>

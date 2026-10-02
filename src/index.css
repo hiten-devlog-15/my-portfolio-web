@@ -22,7 +22,7 @@ section[id] {
 
 
 body {
-  background-color: #0d0d0f;
+  background-color: transparent;
   color: #f0f0f2;
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.6;
@@ -284,27 +284,6 @@ body {
   color: #4f7ef7;
 }
 
-/* ===== PORTRAIT ===== */
-.portrait-container {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.portrait-container::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: 12px;
-  background: linear-gradient(
-    160deg,
-    rgba(79,126,247,0.2) 0%,
-    transparent 60%
-  );
-  pointer-events: none;
-  z-index: 1;
-}
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {

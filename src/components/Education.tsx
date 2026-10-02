@@ -1,6 +1,6 @@
 export default function Education() {
   return (
-    <section id="education" className="section-padding bg-[#0d0d0f]">
+    <section id="education" className="section-padding">
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="reveal">

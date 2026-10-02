@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="section-padding bg-[#0d0d0f]">
+    <section id="about" className="section-padding">
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="reveal max-w-2xl">
@@ -18,20 +18,15 @@ export default function About() {
             <p className="text-[#c8c8d8] leading-relaxed">
               I'm a B.Tech Information Technology student at VESIT Mumbai, focused on backend
               development. I work primarily with <span className="text-[#f0f0f2] font-medium">Java</span> and{' '}
-              <span className="text-[#f0f0f2] font-medium">Spring Boot</span>, building
-              REST APIs, database-backed applications and layered backend systems.
+              <span className="text-[#f0f0f2] font-medium">Spring Boot</span>, building REST APIs,
+              database-backed applications, and layered backend systems.
             </p>
-            <p className="text-[#8a8a9a] leading-relaxed">
-              I'm genuinely interested in how backend systems work under the hood — persistence,
-              service layers, clean architecture and the kind of structure that makes a codebase
-              maintainable as it grows. Most of what I know comes from building real projects and
-              digging into the internals of the tools I use.
-            </p>
-            <p className="text-[#8a8a9a] leading-relaxed">
-              I write clean, organised code, care about separation of concerns, and find
-              satisfaction in designing systems that handle real-world complexity without
-              becoming tangled. Currently exploring backend patterns, system design fundamentals,
-              and working toward stronger production-grade Java skills.
+
+            <p className="text-[#c8c8d8] leading-relaxed">
+              I'm interested in understanding how backend systems work under the hood and building
+              clean, maintainable software. Currently, I'm strengthening my Java backend skills,
+              exploring system design fundamentals, and learning how to build production-ready
+              applications.
             </p>
           </div>
 

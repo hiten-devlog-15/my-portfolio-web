@@ -3,7 +3,7 @@ import { GithubIcon, LinkedinIcon } from './Icons';
 
 export default function GitHubPresence() {
   return (
-    <section id="github" className="section-padding bg-[#111114]">
+    <section id="github" className="section-padding">
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="reveal max-w-2xl">
