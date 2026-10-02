@@ -17,16 +17,18 @@ export default function Hero() {
 
       <div className="max-w-3xl mx-auto px-6 w-full flex flex-col items-center text-center">
 
-        {/* ── Role label ── */}
-        <p className="section-label mb-3">Java Backend Developer</p>
-
-        {/* ── Name ── */}
-        <h1
-          className="text-4xl sm:text-5xl lg:text-[58px] leading-[1.08] text-[#f0f0f2] mb-7"
-          style={{ fontWeight: 700, letterSpacing: '-0.02em' }}
-        >
-          Hiten Nath
-        </h1>
+        {/* ── Name and Role ── */}
+        <div className="mb-7 inline-block text-left">
+          <p className="text-[#a0a0b0] text-base sm:text-lg font-medium mb-1.5 tracking-wide">
+            Hi I'm
+          </p>
+          <h1
+            className="text-3xl sm:text-4xl lg:text-[42px] leading-[1.1] text-[#f0f0f2]"
+            style={{ fontWeight: 700, letterSpacing: '-0.02em' }}
+          >
+            Hiten Nath: Java Backend Developer
+          </h1>
+        </div>
 
         {/* ── Primary tagline ── */}
         <p className="text-base sm:text-lg text-[#c8c8d8] leading-relaxed mb-3 max-w-xl">
@@ -59,26 +61,17 @@ export default function Hero() {
         {/* ── Social icons ── */}
         <div className="flex items-center justify-center gap-3">
           <a
-            href="https://github.com/hiten-devlog-15"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-icon-link"
-            aria-label="GitHub profile"
-          >
-            <GithubIcon size={17} />
-          </a>
-          <a
             href="https://www.linkedin.com/in/hiten-nath-java--developer/"
             target="_blank"
             rel="noopener noreferrer"
-            className="social-icon-link"
+            className="social-icon-link linkedin-link"
             aria-label="LinkedIn profile"
           >
             <LinkedinIcon size={17} />
           </a>
           <a
             href="mailto:nathhiten704@gmail.com"
-            className="social-icon-link"
+            className="social-icon-link email-link"
             aria-label="Send email"
           >
             <Mail size={17} />

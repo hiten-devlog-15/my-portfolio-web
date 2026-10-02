@@ -16,7 +16,7 @@ export default function Navbar() {
           BAR 1 — Main header (NOT sticky)
           Scrolls away with page content.
       ═══════════════════════════════════════ */}
-      <header className="relative z-40 bg-[#0d0d0f] border-b border-[#1e1e24]">
+      <header className="relative z-40 bg-transparent">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <a
@@ -52,7 +52,7 @@ export default function Navbar() {
               key={label}
               href={href}
               aria-label={label}
-              className="relative group flex items-center justify-center w-9 h-9 rounded-full text-[#7e7e92] hover:text-[#f0f0f2] hover:bg-[#1d1d26] transition-all duration-150"
+              className="relative group flex items-center justify-center w-9 h-9 rounded-full text-[#7e7e92] hover:text-[#f0f0f2] hover:bg-[#1d1d26] transition-all duration-200 hover:shadow-[0_4px_12px_rgba(255,255,255,0.05)]"
             >
               <Icon size={18} strokeWidth={1.6} />
 

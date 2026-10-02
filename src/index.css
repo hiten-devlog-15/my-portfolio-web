@@ -105,12 +105,13 @@ body {
   background: #16161a;
   border: 1px solid #1e1e24;
   border-radius: 10px;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .project-card:hover {
   border-color: rgba(79,126,247,0.35);
   transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(79, 126, 247, 0.08);
 }
 
 /* ===== BUTTONS ===== */
@@ -126,7 +127,7 @@ body {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
+  transition: all 0.25s ease;
   text-decoration: none;
   letter-spacing: 0.01em;
 }
@@ -134,6 +135,7 @@ body {
 .btn-primary:hover {
   background: #6b94ff;
   transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(107, 148, 255, 0.25);
 }
 
 .btn-secondary {
@@ -148,7 +150,7 @@ body {
   border: 1px solid #2a2a35;
   border-radius: 6px;
   cursor: pointer;
-  transition: border-color 0.2s, color 0.2s, transform 0.15s;
+  transition: all 0.25s ease;
   text-decoration: none;
   letter-spacing: 0.01em;
 }
@@ -157,6 +159,7 @@ body {
   border-color: rgba(79,126,247,0.5);
   color: #4f7ef7;
   transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(79, 126, 247, 0.15);
 }
 
 .btn-ghost {
@@ -171,13 +174,14 @@ body {
   border: 1px solid #1e1e24;
   border-radius: 6px;
   cursor: pointer;
-  transition: border-color 0.2s, color 0.2s;
+  transition: all 0.25s ease;
   text-decoration: none;
 }
 
 .btn-ghost:hover {
   border-color: rgba(79,126,247,0.35);
   color: #4f7ef7;
+  box-shadow: 0 4px 15px rgba(79, 126, 247, 0.1);
 }
 
 /* ===== MODAL OVERLAY ===== */
@@ -235,11 +239,12 @@ body {
   border: 1px solid #1e1e24;
   border-radius: 10px;
   padding: 28px 32px;
-  transition: border-color 0.2s;
+  transition: all 0.25s ease;
 }
 
 .timeline-card:hover {
   border-color: rgba(79,126,247,0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(79, 126, 247, 0.05);
 }
 
 /* ===== TECH TAG ===== */
@@ -276,12 +281,25 @@ body {
   border-radius: 6px;
   color: #5a5a6e;
   text-decoration: none;
-  transition: border-color 0.2s, color 0.2s;
+  transition: all 0.25s ease;
 }
 
 .social-icon-link:hover {
   border-color: rgba(79,126,247,0.4);
   color: #4f7ef7;
+  box-shadow: 0 4px 12px rgba(79, 126, 247, 0.15);
+}
+
+.social-icon-link.linkedin-link:hover {
+  border-color: #0a66c2;
+  color: #0a66c2;
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.2);
+}
+
+.social-icon-link.email-link:hover {
+  border-color: #c93b59;
+  color: #c93b59;
+  box-shadow: 0 4px 12px rgba(201, 59, 89, 0.2);
 }
 
 

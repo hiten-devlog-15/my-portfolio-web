@@ -1,20 +1,9 @@
 import { useEffect, useRef, useCallback } from 'react';
 
-// ─── Import all frames via Vite's import.meta.glob ───────────────────────────
-// Returns a record of { path → url } for every jpg in the assets folder.
-const frameModules = import.meta.glob<string>(
-  '../assets/video-frames/*.jpg',
-  { eager: true, query: '?url', import: 'default' }
-);
+import manifest from '../frameManifest.json';
 
-// Sort the paths numerically by filename so frames play in order.
-const FRAME_URLS: string[] = Object.entries(frameModules)
-  .sort(([pathA], [pathB]) =>
-    pathA.localeCompare(pathB, undefined, { numeric: true, sensitivity: 'base' })
-  )
-  .map(([, url]) => url);
-
-const TOTAL_FRAMES = FRAME_URLS.length;
+const FRAME_URLS: string[] = manifest.frames;
+const TOTAL_FRAMES = manifest.totalFrames;
 
 // ─── Component ────────────────────────────────────────────────────────────────
 export default function ScrollVideoBackground() {
