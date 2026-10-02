@@ -18,15 +18,13 @@ export default function Hero() {
       <div className="max-w-3xl mx-auto px-6 w-full flex flex-col items-center text-center">
 
         {/* ── Name and Role ── */}
-        <div className="mb-7 inline-block text-left">
-          <p className="text-[#a0a0b0] text-base sm:text-lg font-medium mb-1.5 tracking-wide">
-            Hi I'm
-          </p>
+        <div className="mb-7 w-full max-w-xl text-left">
           <h1
             className="text-3xl sm:text-4xl lg:text-[42px] leading-[1.1] text-[#f0f0f2]"
             style={{ fontWeight: 700, letterSpacing: '-0.02em' }}
           >
-            Hiten Nath: Java Backend Developer
+            Hi I'm Hiten Nath,<br />
+            Java Backend Developer
           </h1>
         </div>
 
@@ -36,7 +34,7 @@ export default function Hero() {
         </p>
 
         {/* ── Supporting text ── */}
-        <p className="text-sm sm:text-base text-[#8a8a9a] leading-relaxed max-w-xl mb-10">
+        <p className="text-sm sm:text-base text-[#FFFFFF] leading-relaxed max-w-xl mb-10">
           I enjoy designing backend systems, understanding how they work internally,
           and turning real-world problems into maintainable software.
         </p>
@@ -52,6 +50,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary"
+            style={{ backgroundColor: '#16161A' }}
           >
             <GithubIcon size={15} />
             GitHub

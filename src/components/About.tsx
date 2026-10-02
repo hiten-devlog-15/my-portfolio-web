@@ -45,7 +45,7 @@ export default function About() {
                 'Data Structures & Algorithms',
                 'Problem Solving',
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-sm text-[#8a8a9a]">
+                <li key={item} className="flex items-center gap-3 text-sm text-[#FFFFFF]">
                   <span className="w-1 h-1 rounded-full bg-[#4f7ef7] flex-shrink-0" />
                   {item}
                 </li>

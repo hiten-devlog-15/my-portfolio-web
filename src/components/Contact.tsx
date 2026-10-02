@@ -27,8 +27,8 @@ export default function Contact() {
               className="flex items-center gap-4 p-5 bg-[#16161a] border border-[#1e1e24] rounded-xl hover:border-[rgba(79,126,247,0.35)] transition-colors group"
               aria-label="Send email to Hiten Nath"
             >
-              <div className="w-10 h-10 flex items-center justify-center bg-[#0d0d0f] border border-[#1e1e24] rounded-lg group-hover:border-[rgba(79,126,247,0.35)] transition-colors">
-                <Mail size={18} className="text-[#4f7ef7]" />
+              <div className="w-10 h-10 flex items-center justify-center bg-[#0d0d0f] border border-[#1e1e24] rounded-lg group-hover:border-[#c93b59] transition-colors">
+                <Mail size={18} className="text-[#c93b59]" />
               </div>
               <div>
                 <p className="text-sm font-medium text-[#f0f0f2]">Email</p>
@@ -43,8 +43,8 @@ export default function Contact() {
               className="flex items-center gap-4 p-5 bg-[#16161a] border border-[#1e1e24] rounded-xl hover:border-[rgba(79,126,247,0.35)] transition-colors group"
               aria-label="Hiten Nath on GitHub"
             >
-              <div className="w-10 h-10 flex items-center justify-center bg-[#0d0d0f] border border-[#1e1e24] rounded-lg group-hover:border-[rgba(79,126,247,0.35)] transition-colors">
-                <GithubIcon size={18} className="text-[#8a8a9a] group-hover:text-[#f0f0f2] transition-colors" />
+              <div className="w-10 h-10 flex items-center justify-center bg-black border border-[#1e1e24] rounded-lg group-hover:border-[#f0f0f2] transition-colors">
+                <GithubIcon size={18} className="text-[#f0f0f2]" />
               </div>
               <div>
                 <p className="text-sm font-medium text-[#f0f0f2]">GitHub</p>
@@ -59,8 +59,8 @@ export default function Contact() {
               className="flex items-center gap-4 p-5 bg-[#16161a] border border-[#1e1e24] rounded-xl hover:border-[rgba(79,126,247,0.35)] transition-colors group"
               aria-label="Hiten Nath on LinkedIn"
             >
-              <div className="w-10 h-10 flex items-center justify-center bg-[#0d0d0f] border border-[#1e1e24] rounded-lg group-hover:border-[rgba(79,126,247,0.35)] transition-colors">
-                <LinkedinIcon size={18} className="text-[#8a8a9a] group-hover:text-[#0077b5] transition-colors" />
+              <div className="w-10 h-10 flex items-center justify-center bg-[#0d0d0f] border border-[#1e1e24] rounded-lg group-hover:border-[#0a66c2] transition-colors">
+                <LinkedinIcon size={18} className="text-[#0a66c2]" />
               </div>
               <div>
                 <p className="text-sm font-medium text-[#f0f0f2]">LinkedIn</p>

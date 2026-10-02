@@ -279,26 +279,38 @@ body {
   height: 38px;
   border: 1px solid #1e1e24;
   border-radius: 6px;
-  color: #5a5a6e;
   text-decoration: none;
+  background: #0d0d0f;
   transition: all 0.25s ease;
 }
 
 .social-icon-link:hover {
   border-color: rgba(79,126,247,0.4);
-  color: #4f7ef7;
   box-shadow: 0 4px 12px rgba(79, 126, 247, 0.15);
 }
 
+.social-icon-link.github-link {
+  color: #f0f0f2;
+  background: #000000;
+}
+.social-icon-link.github-link:hover {
+  border-color: #f0f0f2;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+.social-icon-link.linkedin-link {
+  color: #0a66c2;
+}
 .social-icon-link.linkedin-link:hover {
   border-color: #0a66c2;
-  color: #0a66c2;
   box-shadow: 0 4px 12px rgba(10, 102, 194, 0.2);
 }
 
+.social-icon-link.email-link {
+  color: #c93b59;
+}
 .social-icon-link.email-link:hover {
   border-color: #c93b59;
-  color: #c93b59;
   box-shadow: 0 4px 12px rgba(201, 59, 89, 0.2);
 }
 
